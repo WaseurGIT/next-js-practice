@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Navbar = () => {
@@ -10,12 +11,20 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="max-w-7xl bg-white/30 mx-auto py-2 rounded-lg">
+    <div className="max-w-7xl bg-white/30 mx-auto py-2 rounded-lg flex items-center justify-between px-6">
+      <div>
+        <h1 className="text-2xl font-bold text-white">Next.js</h1>
+      </div>
+
       <div className="flex items-center justify-center gap-10">
         {navLinks.map((link) => (
-          <a key={link.path} href={link.path} className="text-white hover:underline">
+          <Link
+            key={link.path}
+            href={link.path}
+            className="text-white hover:underline"
+          >
             {link.label}
-          </a>
+          </Link>
         ))}
       </div>
     </div>

@@ -10,10 +10,10 @@ const Navbar = () => {
   ];
 
   return (
-    <div className="max-w-7xl mx-auto bg-gray-200 py-2 rounded-lg mt-2">
+    <div className="max-w-7xl bg-white/30 mx-auto py-2 rounded-lg">
       <div className="flex items-center justify-center gap-10">
         {navLinks.map((link) => (
-          <a key={link.path} href={link.path}>
+          <a key={link.path} href={link.path} className="text-white hover:underline">
             {link.label}
           </a>
         ))}
